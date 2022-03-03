@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BakerHouse.User_Pages.Start_your_business" Title="Start your business" BackgroundImageSource="back.jpg">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="24" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+
+                <Image WidthRequest="200" Source="about.png" />
+
+                <Label FontAttributes="Bold" FontSize="Large" Text="BakerHouse" HorizontalOptions="CenterAndExpand"/>
+                <Label Text="Version 1.0" HorizontalOptions="CenterAndExpand"/>
+                <Label/>
+                <Label Text=" BakerHouse is a mobile app that act as a bridge between coustmer and bakery items it provide information about bakery products along with
+              their suitable rates online coustmer can place order by giving their detail such as contact,E_mail and Adress etc. This app is developed to make the coustmers comfortable.This app provide the facility to other to sale their own products 
+                   through this app.If anyone want to sale their products send us your details.
+                   " />
+                <Label/>
+              
+                <Button Text="Send us Details..." Clicked="Button_Clicked" />
+
+            </StackLayout>
+        </ScrollView> 
+    </ContentPage.Content>
+</ContentPage>

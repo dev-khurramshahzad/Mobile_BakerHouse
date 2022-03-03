@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BakerHouse.Admin_Pages.CreateCategories" BackgroundImageSource="back.jpg">
+    <ContentPage.Content>
+        <StackLayout Padding="24">
+
+            <Entry Placeholder="Category Name e.g. Bakery Items" x:Name="txtCatName" IsTextPredictionEnabled="True" ReturnType="Next" />
+            <Editor Placeholder="Category Details ..." HeightRequest="100" x:Name="txtCatDetails"/>
+            <Image Source="camera.png" x:Name="PreviewPic">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Button Text="Add Category" Clicked="Button_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

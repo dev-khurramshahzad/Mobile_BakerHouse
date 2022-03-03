@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BakerHouse.User_Pages.Payment">
+    <ContentPage.Content>
+        <StackLayout>
+            <ActivityIndicator IsRunning="True" x:Name="Loading" />
+            <WebView Navigated="WebPageViewer_Navigated" Navigating="WebPageViewer_Navigating" HorizontalOptions="FillAndExpand" HeightRequest="400" x:Name="WebPageViewer"/>
+            <Button Text="Proceed" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

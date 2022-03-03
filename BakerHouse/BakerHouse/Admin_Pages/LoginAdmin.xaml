@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BakerHouse.Admin_Pages.LoginAdmin"
+             Title="Login Admin" BackgroundImageSource="back.jpg">
+   
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="0">
+                <StackLayout x:Name="stkLogin" Spacing="24" HorizontalOptions="FillAndExpand" Padding="12" VerticalOptions="CenterAndExpand" >
+                    <Image Source="logo1.png"/>
+                    <Label />
+                    <Entry x:Name="txtEmail" Keyboard="Email" Placeholder="Enter Your Email" IsSpellCheckEnabled="True" IsTabStop="True" IsTextPredictionEnabled="True" ReturnType="Next" />
+                    <Entry x:Name="txtPass" Placeholder="Enter Password" IsPassword="True"  IsTabStop="True"  ReturnType="Next" />
+                    <StackLayout Padding="0" Orientation="Horizontal">
+                        <CheckBox x:Name="cbRemember" />
+                        <Label FontSize="20" Text="Remember Me"/>
+                    </StackLayout>
+                    
+                    <Button x:Name="btn" Clicked="btn_Clicked" Text="Login" />
+                   
+                </StackLayout>
+
+
+
+
+
+                <StackLayout IsVisible="false" x:Name="stkReset" HorizontalOptions="CenterAndExpand" Padding="12" VerticalOptions="CenterAndExpand" >
+                    <Label />
+                    <Entry x:Name="txtEmailReset" Keyboard="Email" Placeholder="Enter Your Email" IsSpellCheckEnabled="True" IsTabStop="True" IsTextPredictionEnabled="True" ReturnType="Done" />
+                    <Button x:Name="btnReset" Clicked="btnReset_Clicked" Text="Get Password" />
+
+                </StackLayout>
+
+            </StackLayout>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

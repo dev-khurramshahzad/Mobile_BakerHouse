@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BakerHouse.User_Pages.CreateAccount" Title="CreateAccount" BackgroundImageSource="back.jpg">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="24">
+                <Image Source="avatar.png" />
+                <Entry x:Name="txtName" Placeholder="Enter Name" ReturnType="Next" IsTextPredictionEnabled="True" ClearButtonVisibility="WhileEditing" />
+
+
+                <Entry x:Name="txtEmail" TextChanged="txtEmail_TextChanged" Placeholder="Enter Email" Keyboard="Email" ReturnType="Next" IsTextPredictionEnabled="True" ClearButtonVisibility="WhileEditing" />
+                <Label x:Name="lblEmailVali" />
+
+                <Entry x:Name="txtPhone" TextChanged="txtPhone_TextChanged"  Placeholder="Enter Phone" Keyboard="Telephone" ReturnType="Next" IsTextPredictionEnabled="True" ClearButtonVisibility="WhileEditing" />
+                <Label x:Name="lblPhoneVali" />
+
+                <Entry x:Name="txtCNIC" TextChanged="txtCNIC_TextChanged" Placeholder="Enter CNIC" Keyboard="Numeric" ReturnType="Next" IsTextPredictionEnabled="True" ClearButtonVisibility="WhileEditing" />
+                <Label x:Name="lblCNICVali" />
+
+                <Entry x:Name="txtPass" TextChanged="txtPass_TextChanged" Placeholder="Enter Password" IsPassword="True" ReturnType="Next" IsTextPredictionEnabled="True" ClearButtonVisibility="WhileEditing" />
+                <Label x:Name="lblPassVali" />
+                <Entry x:Name="txtCPass" Placeholder="Re-Enter Password" IsPassword="True" ReturnType="Next" IsTextPredictionEnabled="True" ClearButtonVisibility="WhileEditing" />
+
+                <Entry x:Name="txtAddress" TextChanged="txtAddress_TextChanged"  Placeholder="Enter Address" ReturnType="Next" IsTextPredictionEnabled="True" ClearButtonVisibility="WhileEditing" />
+                <Label x:Name="lblAddressVali" />
+
+
+                
+
+                <!--<Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                    </Grid.RowDefinitions>
+
+                    <Button Grid.Row="0" Grid.Column="0" Text="Pick Image" x:Name="btnPick" Clicked="btnPick_Clicked"/>
+                    <Button Grid.Row="1" Grid.Column="0"  Text="Take image" x:Name="btnTake" Clicked="btnTake_Clicked" />
+                    <Image  HeightRequest="100" Aspect="AspectFill"  Grid.Column="1" Grid.RowSpan="2" Source="nopic.jpg"  x:Name="PreviewImage" />
+
+
+                </Grid>-->
+
+
+                <Button Text="Create Account" x:Name="btncreate" Clicked="btncreate_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

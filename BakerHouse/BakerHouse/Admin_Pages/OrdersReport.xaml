@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BakerHouse.AdminPages.OrdersReport"
+             Title="Orders List">
+    <ContentPage.Content>
+        <ScrollView Padding="24">
+            <ListView x:Name="DataList" ItemTapped="DataList_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell TextColor="Black" Text="{Binding Name}" ImageSource="{Binding Image}" Detail="{Binding Detail}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

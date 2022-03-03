@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BakerHouse.UserPages.UsersList"
+             Title=" Users List"
+             >
+    <ContentPage.Content>
+        <StackLayout Padding="24">
+
+
+            <ListView x:Name="DataList">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+
+                        <TextCell Text="{Binding Name}" Detail= "{Binding Email}" >
+
+                            <TextCell.ContextActions>
+                                <MenuItem Text="view" Clicked="MenuItem_ClickedView" CommandParameter="{ Binding .}"/>
+                                <MenuItem Text="edit" Clicked="MenuItem_ClickedEdit" CommandParameter="{ Binding .}"/>
+
+                                <MenuItem Text="delet" Clicked="MenuItem_ClickedDelete" CommandParameter="{ Binding .}"/>
+
+
+
+
+                            </TextCell.ContextActions>
+                            
+                        </TextCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <StackLayout Spacing="12" Padding="24">
+                <Entry IsVisible="false" Placeholder=" Enter your Full name" x:Name="txtName" ReturnType="Next" />
+                <Entry IsVisible="false"  Placeholder=" Enter your Email" Keyboard="Email" x:Name="txtEmail" ReturnType="Next" />
+
+                <Entry IsVisible="false"  Placeholder=" Enter your password" x:Name="txtPass" ReturnType="Next" />
+               
+                <Entry IsVisible="false"  Placeholder="Enter your phone number" Keyboard="Numeric"  x:Name="txtphone" ReturnType="Done" />
+
+                <Button IsVisible="false" Text="Update data"  x:Name="btnUpdate" Clicked="btnUpdate_Clicked"  BackgroundColor="Olive"  TextColor="White" CornerRadius="12" FontAttributes="Bold"/>
+
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

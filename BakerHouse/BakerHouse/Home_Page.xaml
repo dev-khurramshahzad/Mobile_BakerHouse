@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BakerHouse.Home_Page"
+             BackgroundImageSource="back.jpg"
+              BackgroundColor="#Fd349C" >
+    
+    <ContentPage.Content>
+        <StackLayout Padding="24" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
+            <Label/>
+            <Label/>
+            <Image Source="shome.png" />
+            <Label/>
+
+            <!--<Label HorizontalOptions="CenterAndExpand" Text=" Baker House "  TextColor="White" FontSize="24"/>-->
+            
+            <Label/>
+            <Label/>
+            <Label/>
+            <Label/>
+            <Label/>
+            <Label FontSize="Medium"  Text="We Serve Baking Items with Ease." TextColor="{StaticResource MainColor}" Padding="14"/>
+
+            <Button Text="Get Started" TextColor="White"  BackgroundColor="{StaticResource MainColor}" CornerRadius="50" Clicked="Button_Clicked"/>
+            <StackLayout Orientation="Horizontal">
+                <Label/>
+                <Label Text="Admin Panel     " HorizontalOptions="CenterAndExpand" TextColor="{StaticResource MainColor}" >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <Label/>
+                <Label Text="Reset Default" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource MainColor}" >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped1" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

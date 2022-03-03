@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BakerHouse.User_Pages.CategoriesList"
+             Title="Categories">
+    
+    <ContentPage.Content>
+        <StackLayout Padding="24">
+            <ListView x:Name="DataList" ItemTapped="DataList_ItemTapped" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <StackLayout Padding="8" >
+                                <Grid>
+                                    <Image WidthRequest="300" HeightRequest="300" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  Source="{Binding CatImage}"/>
+                                    <Label HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  BackgroundColor="{StaticResource MainColor}" TextColor="White" Padding="8" Text="{Binding CatName}" />
+
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+
+                        <!--<ImageCell Text="{Binding CatName}" Detail="{ Binding CatDetail}" ImageSource="{Binding CatImage}"/>-->
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

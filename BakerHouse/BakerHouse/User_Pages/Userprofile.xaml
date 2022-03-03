@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BakerHouse.User_Pages.Userprofile" Title="User Profile" BackgroundImageSource="back.jpg">
+    <ContentPage.Content>
+        <StackLayout   Padding="24">
+
+
+            <Image HorizontalOptions="CenterAndExpand" Source="avatar.png" />
+            <Label />
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110*" />
+                    <ColumnDefinition Width="250*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0"   Text="Name" />
+                <Label Grid.Row="1" Grid.Column="0"   Text="Email" />
+                <Label Grid.Row="2" Grid.Column="0"   Text="Password" />
+                <Label  Grid.Row="3" Grid.Column="0"   Text="Phone" />
+                <Label  Grid.Row="4" Grid.Column="0"   Text="Address" />
+
+
+                <Label x:Name="lblName" Grid.Row="0" Grid.Column="1"   Text="N / A" />
+                <Label x:Name="lblEmail"  Grid.Row="1" Grid.Column="1"   Text="N / A" />
+                <Label x:Name="lblPassword" Grid.Row="2" Grid.Column="1"   Text="N / A" />
+                <Label x:Name="lblPhone" Grid.Row="3" Grid.Column="1"   Text="N / A" />
+                <Label x:Name="lblAddress" Grid.Row="4" Grid.Column="1"   Text="N / A" />
+
+            </Grid>
+
+
+            <!--<Button Text="Add Category" x:Name="btnAddCategory" Clicked="btnAddCategory_Clicked"/>
+            <Button Text="Manage Categories" x:Name="btnManagecat" Clicked="btnManagecat_Clicked"/>-->
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

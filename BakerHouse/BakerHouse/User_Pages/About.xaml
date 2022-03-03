@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BakerHouse.User_Pages.About"  
+             Title="About Us" BackgroundImageSource="back.jpg">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="24" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+
+            <Image WidthRequest="200" Source="about.png" />
+
+            <Label FontAttributes="Bold" FontSize="Large" Text="BakerHouse" HorizontalOptions="CenterAndExpand"/>
+            <Label Text="Version 1.0" HorizontalOptions="CenterAndExpand"/>
+                <Label/>
+                <Label Text=" BakerHouse is a mobile app that act as a bridge between coustmer and bakery items it provide information about bakery products along with
+              their suitable rates online coustmer can place order by giving their detail such as contact,E_mail and Adress etc. This app is developed to make the coustmers comfortable.
+                  
+                   " />
+                <Label/>
+
+                <Label Text="Govt. Graduate College (W)" HorizontalOptions="CenterAndExpand"/>
+            <Label/>
+            <Label/>
+            <Label/>
+            <Label Text="Created by:" HorizontalOptions="CenterAndExpand"/>
+            <Label Text="Sobia Abdulsattar | Maria Afzal |Laiba Iftkhar" HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

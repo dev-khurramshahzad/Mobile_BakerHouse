@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BakerHouse.Admin_Pages.CreateItems" BackgroundImageSource="back.jpg">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="24">
+                <Entry x:Name="txtName"  Placeholder=" Product Name " ReturnType="Next" IsSpellCheckEnabled="True" IsTextPredictionEnabled="True" />
+                <!--<Button Text="Select Picture " x:Name="btnpic" />-->
+                <Image Source="camera.png" x:Name="PreviewPic">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Picker Title="---Select Category---" x:Name="ddlCat" />
+                <Entry x:Name="txtPPrice"  Keyboard="Numeric" Placeholder="Purchase Price " ReturnType="Next" />
+                <Entry x:Name="txtSprice" Keyboard="Numeric" Placeholder=" Sale Price " ReturnType="Next" />
+
+
+                <Entry x:Name="txtRating" Keyboard="Numeric" Placeholder=" Rating " ReturnType="Next" />
+
+                <Entry x:Name="txtStatus"  Placeholder=" Status " ReturnType="Next" />
+                <Editor x:Name="txtDetail" Placeholder="Details..." HeightRequest="100" />
+                <Button Text="Add Item"  Clicked="Button_Clicked"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BakerHouse.User_Pages.ConfirmOrder"
+             Title="Order Confirmation" BackgroundImageSource="back.jpg">
+   
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="14" >
+                <Image Source="iconcnfrm.png " />
+                <Label/>
+                <Label HorizontalOptions="CenterAndExpand" Text="The Last Step! Your order is almost ready please confirm where do you want to deliver this order?" />
+                <Label />
+
+
+
+                <Button x:Name="btnCurrentLocation" Clicked="btnCurrentLocation_Clicked" Text="Confirm Order" Padding="14" />
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

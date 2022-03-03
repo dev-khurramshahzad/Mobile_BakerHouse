@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BakerHouse.AdminPages.Profit_LossReport"
+             Title="P/L Report" BackgroundImageSource="back.jpg">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout VerticalOptions="Center" Orientation="Horizontal" Padding="8" BackgroundColor="{StaticResource MainColor}">
+                    <Label HorizontalOptions="EndAndExpand" TextColor="White"   Text="Sale : "/>
+                    <Label HorizontalOptions="End"  TextColor="White"     x:Name="lblSale"/>
+
+                    <Label HorizontalOptions="EndAndExpand" TextColor="White"   Text=" - "/>
+
+                    <Label HorizontalOptions="EndAndExpand" TextColor="White"   Text="Purchase : "/>
+                    <Label HorizontalOptions="End"  TextColor="White"     x:Name="lblPurch"/>
+
+                    <Label HorizontalOptions="EndAndExpand" TextColor="White"   Text=" = "/>
+
+                    <Label HorizontalOptions="EndAndExpand" TextColor="White"   Text="Profit : "/>
+                    <Label HorizontalOptions="End"  TextColor="White"     x:Name="lblP_L"/>
+
+                </StackLayout>
+
+
+
+
+
+                <ListView SeparatorVisibility="Default" SeparatorColor="Green" x:Name="DataList" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="2">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinitionCollection>
+                                            <RowDefinition Height="20" />
+                                            <RowDefinition Height="20" />
+                                        </RowDefinitionCollection>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition  Width="70" />
+                                        <ColumnDefinition  Width="*" />
+                                        <ColumnDefinition  Width="40" />
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="{Binding image}" Grid.RowSpan="2" Grid.Column="0" />
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Name}" />
+                                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding Detail}" />
+
+                                    <StackLayout Spacing="0" HorizontalOptions="CenterAndExpand" Grid.RowSpan="2" Grid.Column="2">
+                                        <!--<ImageButton Source="{FontImage Glyph={x:Static helpers:FontAwesome.Remove},FontFamily={StaticResource FontAwesome},Color=Red,Size=24}" x:Name="btnRemove" Clicked="btnRemove_Clicked" CommandParameter="{Binding .}"/>-->
+                                        <!--<ImageButton Source="{FontImage Glyph={x:Static helpers:FontAwesome.Remove},FontFamily={StaticResource FontAwesome},Color=Red,Size=24}" x:Name="btnRemove" Clicked="btnRemove_Clicked" CommandParameter="{Binding .}"/>-->
+                                    </StackLayout>
+                                </Grid>
+
+                            </ViewCell>
+
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BakerHouse.User_Pages.Profile" Title="Profile" BackgroundImageSource="back.jpg">
+    <ContentPage.Content>
+       
+        <ScrollView>
+            <StackLayout Padding="24">
+                <Label TextColor="{StaticResource MainColor}" Text="Type Here your info..."
+               HorizontalOptions="CenterAndExpand" FontSize="Large"    
+                   />
+            
+            <StackLayout Padding="24">
+                
+                
+                <Image Source="avatar.png" />
+                 <Entry x:Name="txtName" Placeholder="Enter Name" ReturnType="Next" IsTextPredictionEnabled="True" ClearButtonVisibility="WhileEditing" />
+                 <Entry x:Name="txtPhone" TextChanged="txtPhone_TextChanged1" Placeholder="Enter Phone" Keyboard="Telephone" ReturnType="Next" IsTextPredictionEnabled="True" ClearButtonVisibility="WhileEditing" />
+                <Label x:Name="lblPhoneVali" />
+                <Entry x:Name="txtAddress" Placeholder="Enter Address" ReturnType="Next" IsTextPredictionEnabled="True" ClearButtonVisibility="WhileEditing" />
+                <Label x:Name="lblAddressVali" />
+                    <Button Text="Submit" Clicked="Button_Clicked" />
+
+
+
+
+
+
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

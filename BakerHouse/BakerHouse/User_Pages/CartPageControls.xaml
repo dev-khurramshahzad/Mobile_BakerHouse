@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BakerHouse.User_Pages.CartPageControls"
+             Title="Invoice Details" BackgroundImageSource="back.jpg" >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem  Text="Confirm order" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout VerticalOptions="Center" Orientation="Horizontal" Padding="8" BackgroundColor="{StaticResource MainColor}">
+                    <Label HorizontalOptions="EndAndExpand" TextColor="White"  FontSize="Title" Text="Total Bill Rs.  : "/>
+                    <Label HorizontalOptions="End"  TextColor="White"  FontSize="Title" Text="480"  x:Name="lblTotal"/>
+                </StackLayout>
+
+
+
+
+
+                <ListView SeparatorVisibility="Default" SeparatorColor="Green" x:Name="DataList" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="2">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinitionCollection>
+                                            <RowDefinition Height="20" />
+                                            <RowDefinition Height="20" />
+                                        </RowDefinitionCollection>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition  Width="70" />
+                                        <ColumnDefinition  Width="*" />
+                                        <ColumnDefinition  Width="40" />
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="{Binding image}" Grid.RowSpan="2" Grid.Column="0" />
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Name}" />
+                                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding Detail}" />
+
+                                    <StackLayout Spacing="0" HorizontalOptions="CenterAndExpand" Grid.RowSpan="2" Grid.Column="2">
+                                        <ImageButton Source="crosss.jpg" x:Name="btnRemove" Clicked="btnRemove_Clicked" CommandParameter="{Binding .}"/>
+                                    </StackLayout>
+                                </Grid>
+
+
+
+
+
+
+
+
+
+
+                                <!--<Grid Padding="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinitionCollection>
+                                            <RowDefinition Height="20" />
+                                            <RowDefinition Height="20" />
+                                        </RowDefinitionCollection>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition  Width="70" />
+                                        <ColumnDefinition  Width="*" />
+                                        <ColumnDefinition  Width="40" />
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="images.png" Grid.RowSpan="2" Grid.Column="0" />
+                                    <Label Grid.Row="0" Grid.Column="1" Text="Potato" />
+                                    <StackLayout  Grid.Row="1" Grid.Column="1" Padding="0" Orientation="Horizontal"  >
+                                        <Label  Text="4" />
+                                        <Label  Text="KG(s)" />
+                                        <Label  Text=" X " />
+                                        <Label  Text="Rs." />
+                                        <Label  Text="60" />
+                                        <Label  Text=" = " />
+                                        <Label  Text="Rs." />
+                                        <Label  Text="240" />
+
+                                    </StackLayout>
+                                    <StackLayout Spacing="0" HorizontalOptions="CenterAndExpand" Grid.RowSpan="2" Grid.Column="2">
+                                        <ImageButton Source="{FontImage Glyph={x:Static helpers:FontAwesome.Remove},FontFamily={StaticResource FontAwesome},Color=Red,Size=24}" x:Name="btnRemove" Clicked="btnRemove_Clicked" CommandParameter="{Binding .}"/>
+                                    </StackLayout>
+                                    --><!--<Line Grid.Row="2" Margin="5" Grid.ColumnSpan="3" Stroke="Green" StrokeThickness="1" X2="300" HorizontalOptions="StartAndExpand"/>--><!--
+                                </Grid>-->
+                            </ViewCell>
+                            
+                            
+                            <!--<ImageCell Text="{Binding ItemName}" ImageSource="{Binding Image}" Detail="{Binding Details}" />-->
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

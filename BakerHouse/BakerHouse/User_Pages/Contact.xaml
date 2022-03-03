@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BakerHouse.User_Pages.Contact"
+             
+             Title="Contact Us" BackgroundImageSource="back.jpg">
+    
+    <ContentPage.Content>
+        <StackLayout Padding="24" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+
+            <Image WidthRequest="200" Source="about.png" />
+            <Label FontAttributes="Bold" FontSize="Large" Text="Contact Us" HorizontalOptions="CenterAndExpand"/>
+            <Label/>
+            <Label/>
+            <Label/>
+            <StackLayout Padding="0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Label HorizontalTextAlignment="Center" Text="+9230000000000" />
+
+                <Label Text=" | "/>
+                <Label HorizontalTextAlignment="Center" Text="+9230000000000" />
+
+            </StackLayout>
+
+            <StackLayout Padding="0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Label HorizontalTextAlignment="Center" Text="info@bakerhouse.com" />
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
