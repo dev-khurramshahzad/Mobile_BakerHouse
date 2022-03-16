@@ -15,10 +15,7 @@
                     <Label />
                     <Entry x:Name="txtEmail" Keyboard="Email" Placeholder="Enter Your Email" IsSpellCheckEnabled="True" IsTabStop="True" IsTextPredictionEnabled="True" ReturnType="Next" />
                     <Entry x:Name="txtPass" Placeholder="Enter Password" IsPassword="True"  IsTabStop="True"  ReturnType="Next" />
-                    <StackLayout Padding="0" Orientation="Horizontal">
-                        <CheckBox x:Name="cbRemember" />
-                        <Label FontSize="20" Text="Remember Me"/>
-                    </StackLayout>
+                   
                     
                     <Button x:Name="btn" Clicked="btn_Clicked" Text="Login" />
                    

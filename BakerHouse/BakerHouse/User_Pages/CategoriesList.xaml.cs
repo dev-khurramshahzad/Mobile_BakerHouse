@@ -16,18 +16,10 @@ namespace BakerHouse.User_Pages
         public CategoriesList()
         {
             InitializeComponent();
-            //App.db.CreateTable<Models.Categories>();
-            //if (App.db.Table<Categories>().ToList().Count == 0)
-            //{
-            //    App.db.Insert(new Models.Categories { CatID = 1, CatName = "Pastries", CatDetails = " Details Here", CatImage = "Copy.jpg" });
-            //    App.db.Insert(new Models.Categories { CatID = 2, CatName = "Cakes", CatDetails = " Details Here", CatImage = "Copy.jpg" });
-            //    App.db.Insert(new Models.Categories { CatID = 3, CatName = "CupCakes", CatDetails = " Details Here", CatImage = "Copy.jpg" });
 
-
-            //}
             try
             {
-               DataList.ItemsSource = App.db.Table<Categories>().ToList();
+                DataList.ItemsSource = App.db.Table<Categories>().ToList();
 
             }
             catch (Exception ex)
@@ -56,7 +48,7 @@ namespace BakerHouse.User_Pages
 
             }
         }
-             protected override bool OnBackButtonPressed()
+        protected override bool OnBackButtonPressed()
         {
             Device.BeginInvokeOnMainThread(async () =>
             {
@@ -68,10 +60,14 @@ namespace BakerHouse.User_Pages
                 }
             });
             return true;
-        
 
+        }
 
-
+        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            App.db.DropTable<Remember>();
+            App.LoggedInUser = null;
+            App.Current.MainPage = new Home_Page();
         }
     }
 }

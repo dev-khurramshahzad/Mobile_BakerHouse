@@ -62,7 +62,7 @@ namespace BakerHouse.User_Pages
             int index = -1;
             for (int i = 0; i < App.Cart.Count; i++)
             {
-                if (item.ItemID == App.Cart[i].ProductFID)
+                if (item.ItemID == App.Cart[i].ProductFID )
                 {
                     index = i;
                     var ques = await DisplayAlert("Message", item.ItemName + " is already entered in Cart do you want to increase the quantity of already entered item?", "Yes", "No");

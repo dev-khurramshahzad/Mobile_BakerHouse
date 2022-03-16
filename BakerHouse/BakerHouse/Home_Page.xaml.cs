@@ -1,4 +1,5 @@
 ﻿using BakerHouse.Admin_Pages;
+using BakerHouse.Models;
 using BakerHouse.User_Pages;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,18 @@ namespace BakerHouse
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            App.Current.MainPage = new NavigationPage(new LoginUser());
+            App.db.CreateTable<Remember>();
+            var check = App.db.Table<Remember>().ToList();
+            if (check.Count == 1)
+            {
+                int id = check[0].UserID;
+                App.LoggedInUser = App.db.Table<Users>().FirstOrDefault(x => x.UserID == id);
+                App.Current.MainPage = new UserSidebar();
+            }
+            else
+            {
+                App.Current.MainPage = new NavigationPage(new LoginUser());
+            }
 
         }
 

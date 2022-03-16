@@ -31,8 +31,6 @@ namespace BakerHouse.User_Pages
             try
             {
 
-
-
                 // Required Field Validator =======================================================================
                 if (string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtPass.Text))
                 {
@@ -49,10 +47,9 @@ namespace BakerHouse.User_Pages
                 }
 
 
-                var db = new SQLiteConnection(App.dbPath);
-                db.CreateTable<Users>();
+                App.db.CreateTable<Users>();
 
-                var check = db.Table<Users>().FirstOrDefault(x => x.Email == txtEmail.Text && x.Password == txtPass.Text && x.Type=="Customer");
+                var check = App.db.Table<Users>().FirstOrDefault(x => x.Email == txtEmail.Text && x.Password == txtPass.Text && x.Type == "Customer");
                 if (check == null)
                 {
                     await DisplayAlert("Message", "Email or  password incorrect. Please Try Again", "OK");
@@ -60,6 +57,13 @@ namespace BakerHouse.User_Pages
                 }
                 else
                 {
+                    if (cbRemember.IsChecked == true)
+                    {
+                        App.db.DropTable<Remember>();
+                        App.db.CreateTable<Remember>();
+                        App.db.Insert(new Remember { UserID = check.UserID });
+                    }
+
                     App.LoggedInUser = check;
                     App.Current.MainPage = new UserSidebar();
                 }
@@ -74,46 +78,7 @@ namespace BakerHouse.User_Pages
 
         private async void TapGestureRecognizer_Tapped2(object sender, EventArgs e)
         {
-            try
-            {
-                var check = App.db.Table<Models.Users>().FirstOrDefault(x => x.Email == txtEmail.Text);
-
-                if (check == null)
-                {
-                    await DisplayAlert("Message", "The email you have entered is not registered.", "OK");
-                    return;
-                }
-
-                // EMAIL SENDING ================================================================
-
-                //MailMessage mail = new MailMessage();
-                //mail.To.Add(check.Email);
-                //mail.From = new MailAddress("foodsbaba.suplier@gmail.com", "Password Forgotton", System.Text.Encoding.UTF8);
-                //mail.Subject = "Password Forgot Request";
-                //mail.SubjectEncoding = System.Text.Encoding.UTF8;
-
-                //mail.Body = "Dear Customer Your Current Login Details are as Follows : <br><br><br>Username = " + check.Email + " <br>Password = " + check.Password + " <br><br>Foods Baba";
-                ////mail.Body = "Dear Customer Your Current Login Details are as Follows : <br><br><br>Username =   <br><br>Foods Baba";
-                //mail.BodyEncoding = System.Text.Encoding.UTF8;
-                //mail.IsBodyHtml = true;
-                //mail.Priority = MailPriority.High;
-
-                //SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
-                //client.Credentials = new System.Net.NetworkCredential("foodsbaba.suplier@gmail.com", "juttfood");
-                //client.EnableSsl = true;
-
-                //client.Send(mail);
-
-                //await DisplayAlert("Message", "Your Login Details are sent to your email address please find that in your inbox", "OK");
-
-                stkLogin.IsVisible = true;
-                stkReset.IsVisible = false;
-
-            }
-            catch (Exception ex)
-            {
-                await DisplayAlert("Message", "Somthing went wrong this may be a problem with internet or application please ensure that you have a working internet connectiony . \nError Details : " + ex.Message, "OK");
-            }
+            await Navigation.PushAsync(new ForgotPassword());
         }
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)

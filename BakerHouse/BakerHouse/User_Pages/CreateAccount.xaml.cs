@@ -128,8 +128,7 @@ namespace BakerHouse.User_Pages
                         phone = txtPhone.Text,
                         Status = "Active",
                         Address = txtAddress.Text,
-                        Type = "Admin",
-                        //Details = txtDetails.Text
+                        Type = "Customer",
 
                     };
                     db.Insert(u);

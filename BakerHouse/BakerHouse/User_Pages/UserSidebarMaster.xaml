@@ -3,46 +3,46 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BakerHouse.User_Pages.UserSidebarMaster"
              Title="Master">
-  <StackLayout>
-    <ListView x:Name="MenuItemsListView"
+    <StackLayout>
+        <ListView x:Name="MenuItemsListView"
               SeparatorVisibility="None"
               HasUnevenRows="true"
               ItemsSource="{Binding MenuItems}">
-      <ListView.Header>
+            <ListView.Header>
                 <Grid BackgroundColor="#E91E63">
-          <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="10"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="10"/>
-          </Grid.ColumnDefinitions>
-          <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="10"/>
-          </Grid.RowDefinitions>
-          <Label
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+                    <Label
               Grid.Column="1"
               Grid.Row="2"
               Text="Baker House"
                TextColor="White"
               FontSize="Large"
               Style="{DynamicResource SubtitleStyle}"/>
-        </Grid>
-      </ListView.Header>
-      <ListView.ItemTemplate>
-        <DataTemplate>
-          <ViewCell>
-                        <StackLayout Padding="20" Orientation="Horizontal">
-                            <Image Source="side.png" WidthRequest="50" HeightRequest="50" />
-                            <Label VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
-                    VerticalTextAlignment="Start" 
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="8" HorizontalOptions="FillAndExpand">
+                            <Image WidthRequest="36" Source="ic_forward.png" />
+                            <Label VerticalOptions="FillAndExpand" 
+                    VerticalTextAlignment="Center" 
                     Text="{Binding Title}" 
-                    FontSize="24"/>
+                    FontSize="20"/>
                         </StackLayout>
                     </ViewCell>
-        </DataTemplate>
-      </ListView.ItemTemplate>
-    </ListView>
-  </StackLayout>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>

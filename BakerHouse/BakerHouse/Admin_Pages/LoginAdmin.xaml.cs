@@ -25,7 +25,6 @@ namespace BakerHouse.Admin_Pages
 
         private async void btn_Clicked(object sender, EventArgs e)
         {
-            //App.Current.MainPage = new AdminSidebar();
 
             try
             {
@@ -81,31 +80,7 @@ namespace BakerHouse.Admin_Pages
                     return;
                 }
 
-                // EMAIL SENDING ================================================================
-
-                //MailMessage mail = new MailMessage();
-                //mail.To.Add(check.Email);
-                //mail.From = new MailAddress("foodsbaba.suplier@gmail.com", "Password Forgotton", System.Text.Encoding.UTF8);
-                //mail.Subject = "Password Forgot Request";
-                //mail.SubjectEncoding = System.Text.Encoding.UTF8;
-
-                //mail.Body = "Dear Customer Your Current Login Details are as Follows : <br><br><br>Username = " + check.Email + " <br>Password = " + check.Password + " <br><br>Foods Baba";
-                ////mail.Body = "Dear Customer Your Current Login Details are as Follows : <br><br><br>Username =   <br><br>Foods Baba";
-                //mail.BodyEncoding = System.Text.Encoding.UTF8;
-                //mail.IsBodyHtml = true;
-                //mail.Priority = MailPriority.High;
-
-                //SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
-                //client.Credentials = new System.Net.NetworkCredential("foodsbaba.suplier@gmail.com", "juttfood");
-                //client.EnableSsl = true;
-
-                //client.Send(mail);
-
-                //await DisplayAlert("Message", "Your Login Details are sent to your email address please find that in your inbox", "OK");
-
-                stkLogin.IsVisible = true;
-                stkReset.IsVisible = false;
-
+                
             }
             catch (Exception ex)
             {
